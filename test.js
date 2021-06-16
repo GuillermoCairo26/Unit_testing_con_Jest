@@ -6,10 +6,10 @@ test("One euro should be 1.206 dollars", function(){
     const dollars = fromEuroToDollar(3.5)
 
     // if 1 euro are 1.206 dollars, then 3.5 euros should be (3.5 * 1.2)
-    const expected = 3.5 * 1.2; 
+    const expected = (3.5 * 1.2); 
     
     // this is the comparison for the unit test
-     expect(fromEuroToDollar(3.5)).toBe(4.2); //1 euro are 1.2 dolares, then 3.5 euros should be = (3.5 * 1.2)
+     expect(expected).toBe(dollars);
 })
 
 test("One dolar should be 106.5 yen", function(){
@@ -17,25 +17,28 @@ test("One dolar should be 106.5 yen", function(){
     const { fromDollarToYen } = require('./app.js')
 
     // use the function like its supposed to be used
-    const dollars = fromEuroToDollar(3.5)
+    const dollars = fromDollarToYen(3.5)
 
-    // if 1 euro are 1.206 dollars, then 3.5 euros should be (3.5 * 1.2)
-    const expected = 3.5 * 1.2; 
+    // if 1 dolar is 106.5 yen, then 3.5 dollar should be (3.5 * 106.5)
+    const yen = fromDollarToYen(3.5)
     
     // this is the comparison for the unit test
-     expect(fromEuroToDollar(3.5)).toBe(4.2); //1 euro are 1.2 dolares, then 3.5 euros should be = (3.5 * 1.2)
+    const expected = (3.5 * 106.5); 
+
+    // this is the comparison for the unit test
+    expect(expected).toBe(yen);
 })
 
-test("One euro should be 1.206 dollars", function(){
+test("One yen should be 0.0067 pound", function(){
     //import the function from app.js
-    const { fromEuroToDollar } = require('./app.js')
+    const { fromYenToPound } = require('./app.js')
 
     // use the function like its supposed to be used
-    const dollars = fromEuroToDollar(3.5)
+    const pound = fromYenToPound(3.5)
 
     // if 1 euro are 1.206 dollars, then 3.5 euros should be (3.5 * 1.2)
-    const expected = 3.5 * 1.2; 
+    const expected = (3.5 * 0.0067);  
     
     // this is the comparison for the unit test
-     expect(fromEuroToDollar(3.5)).toBe(4.2); //1 euro are 1.2 dolares, then 3.5 euros should be = (3.5 * 1.2)
+    expect(expected).toBe(pound);
 })
